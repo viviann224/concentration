@@ -4,21 +4,13 @@ import "./FriendCard.css";
 const FriendCard = props => (
   <div className="card">
     <div className="img-container">
-      <img alt={props.name} src={props.image} />
-    </div>
-    <div className="content">
-      <ul>
-        <li>
-          <strong>ID:</strong> {props.id}
-        </li>
-        <li>
-          <strong>image:</strong> correct img
-        </li>
-        <li>
-          <strong>isClicked:</strong> {props.isClicked}
-          {console.log(props)}
-        </li>
-      </ul>
+
+    <a onClick={  () => props.findFriend(props.id)}
+    /*className={props.points ===0 ?  "style_prevu_kit style_prevu_kit_ex" : "style_prevu_kit"} */
+
+      >
+      <img alt={props.id} src={props.image} /></a>
+    
     </div>
     <span onClick={() => props.removeFriend(props.id)} className="remove">
       𝘅
