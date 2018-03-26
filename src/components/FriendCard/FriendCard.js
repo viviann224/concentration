@@ -12,9 +12,7 @@ const FriendCard = props => (
       <img alt={props.id} src={props.image} /></a>
     
     </div>
-    <span onClick={() => props.removeFriend(props.id)} className="remove">
-      𝘅
-    </span>
+
   </div>
 );
 

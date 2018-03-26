@@ -1,8 +1,10 @@
+
+
 .nav-pills {
     position: fixed;
     top: 0;
     left: 0;
-    background: #000;
+    background: #9e9e9e;
     min-height: 65px;
     width: 100%;
     text-align: center;
@@ -17,21 +19,39 @@
 
 .nav-pills a {
     color: #fff;
+
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .nav-pills a:hover {
+    color: #6581cf;
+    background-color: #9e9e9e !important;
+    text-transform: uppercase;
+}
+.logo
+{
+    font-family: 'Bungee Outline', cursive;
+    font-size:26px;
+}
+
+.score
+{
+    color:#cecece;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.normal {
     color: #fff;
-    background-color: #5133a4 !important;
 }
 
-.desc-normal {
-    color: #fff;
+.correct {
+    color: #efe9a8;
+    text-shadow: 2px 2px 4px #000000;
 }
 
-.desc-correct {
-    color: #0f0;
-}
-
-.desc-incorrect {
-    color: #f00;
+.incorrect {
+    color: #e01146;
+    text-shadow: 2px 2px 4px #000000;
+    text-transform: uppercase;
 }

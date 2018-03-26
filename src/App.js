@@ -23,7 +23,7 @@ class App extends Component
     topscore:0,    //the top score for the user's scession
     tempFriends:friends
   };
-
+/*
   removeFriend = id => 
   {
     // Filter this.state.friends for friends with an id not equal to the id being removed
@@ -31,7 +31,7 @@ class App extends Component
     // Set this.state.friends equal to the new friends array
     this.setState({ friends });
   };
-
+*/
   /*shuffl fx to shuffle all the cards  in the game after each turn / card click*/
   shuffle = array => 
   {
@@ -94,12 +94,12 @@ class App extends Component
         statusmsg= {this.state.statusmsg}
         points = {this.state.points}
         topscore= {this.state.topscore} />
-        <Title>Friends List</Title>
+        <Title>Start the game by clicking on the cards. Concentration is a game similar game to Memory where you can only click on the same card once. Click more than once, the game is over. Good Luck! </Title>
         {this.state.friends.map(friend => (
           <FriendCard
             shuffle= {this.shuffle}
             findFriend = {this.findFriend}
-            removeFriend={this.removeFriend}
+           
             id={friend.id}
             key={friend.id}
             image={friend.image}
