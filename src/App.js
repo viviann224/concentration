@@ -6,15 +6,10 @@ import NavBar from "./components/NavBar";
 import friends from "./friends.json";
 import "./App.css";
 
-//initalize nonstatic / statechanging variables
-let statusmsg= "Click on an image but not the same one twice!!";
-let points =0;
-let topscore=0;
-
 //creating a class where there are state changes to update the DOM
 class App extends Component 
 {
-  //variables
+  //initalize nonstatic / statechanging variables
   state = 
   {
     friends,    //info about each card from friends.json
@@ -23,16 +18,8 @@ class App extends Component
     topscore:0,    //the top score for the user's scession
     tempFriends:friends
   };
-/*
-  removeFriend = id => 
-  {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
-  };
-*/
-  /*shuffl fx to shuffle all the cards  in the game after each turn / card click*/
+
+  /*shuffle fx to shuffle all the cards  in the game after each turn / card click*/
   shuffle = array => 
   {
     for (let i = array.length - 1; i > 0; i--) {
@@ -76,11 +63,7 @@ class App extends Component
 
     }
     this.shuffle(friends);
-   {/* const clickedfriends= friends.filter(myclickedfriend => myclickedfriend.id ===id);
-       this.setState({statusmsg});
-       this.setState({ points: (this.state.point+1) });
-       this.setState({friends});}
-  */}
+
 
   };
 
@@ -99,7 +82,6 @@ class App extends Component
           <FriendCard
             shuffle= {this.shuffle}
             findFriend = {this.findFriend}
-           
             id={friend.id}
             key={friend.id}
             image={friend.image}
